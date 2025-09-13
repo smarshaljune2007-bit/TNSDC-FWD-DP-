@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio - S.Marshal</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0; padding: 0;
+      background: linear-gradient(120deg, #74ebd5, #ACB6E5);
+      color: #222;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 {
+      margin: 10px 0;
+    }
+    header {
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      color: white;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      animation: fadeInDown 1s ease;
+    }
+    nav a {
+      margin: 0 12px;
+      color: white; text-decoration: none;
+      font-weight: bold; transition: 0.3s;
+    }
+    nav a:hover {
+      color: yellow;
+      transform: scale(1.1);
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+      animation: fadeIn 1.5s ease;
+    }
+    .skills, .projects {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: zoomIn 1s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: linear-gradient(90deg, #00f2fe, #4facfe);
+      color: white;
+      animation: fadeInUp 1s ease;
+    }
+    input, textarea {
+      width: 100%; padding: 10px; margin: 8px 0;
+      border: 1px solid #ccc; border-radius: 8px;
+    }
+    button {
+      background: linear-gradient(45deg, #ff512f, #dd2476);
+      color: white; border: none; padding: 12px 20px;
+      border-radius: 8px; cursor: pointer;
+      font-size: 16px; transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes zoomIn {
+      from {opacity: 0; transform: scale(0.9);}
+      to {opacity: 1; transform: scale(1);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>S.Marshal - Student Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I am <b>S. Marshal </b>, currently pursuing <b>B.Sc AI</b>.  
+    My ambition is to build a career in the <b>IT field</b>, contributing to areas such as  
+    <b>software development, data analytics, and full stack development</b>.  
+    This portfolio showcases my education, skills, certifications, and projects.</p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><b>B.Sc AI</b> - (Ongoing)</li>
+      <li><b>12th Standard</b> - Completed</li>
+      <li><b>10th Standard</b> - Completed</li>
+    </ul>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card">Python</div>
+      <div class="card">Java</div>
+      <div class="card">SQL</div>
+      <div class="card">HTML, CSS, JavaScript</div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Agnirva Space Internship Program</h3>
+        <p>Successfully participated in internship program.</p>
+      </div>
+      <div class="card">
+        <h3>Digital 101 Journey by NASSCOM</h3>
+        <p>Certified in Digital 101 journey program.</p>
+      </div>
+      <div class="card">
+        <h3>Gen AI Literacy by NASSCOM</h3>
+        <p>Certified in Generative AI Literacy course.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Student Database Management</h3>
+        <p>Built using Python and SQL for managing student records.</p>
+      </div>
+      <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Created using HTML, CSS, JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required><br>
+      <input type="email" id="email" placeholder="Your Email" required><br>
+      <textarea id="message" placeholder="Your Message"></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 S. Marshal | Student Portfolio</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      if(name && email){
+        alert("Thank you, " + name + "! Your message has been sent.");
+      } else {
+        alert("Please fill in all required fields.");
+      }
+    });
+  </script>
+</body>
+</html>
